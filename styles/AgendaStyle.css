@@ -1,0 +1,449 @@
+/* AgendaStyle.css - Design Premium & Moderne (Stats colorées + Icônes catégories) */
+
+/* --- VARIABLES & BASE --- */
+.root {
+    -fx-font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    -fx-background-color: #F1F5F9;
+    -fx-accent: #6366F1;
+}
+
+/* --- BARRE DE MENU --- */
+.menu-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #1E293B !important;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-padding: 5 15;
+}
+
+.menu-bar .menu:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+.menu-bar .menu:hover .label {
+    -fx-text-fill: #6366F1 !important;
+}
+
+/* Context menu */
+.context-menu {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 12px;
+}
+
+.menu-item {
+    -fx-text-fill: #1E293B;
+    -fx-background-radius: 8px;
+    -fx-padding: 8 15;
+}
+
+.menu-item .label {
+    -fx-text-fill: #1E293B !important;
+}
+
+.menu-item:hover {
+    -fx-background-color: #EEF2FF;
+}
+
+.menu-item:hover .label {
+    -fx-text-fill: #6366F1 !important;
+}
+
+/* --- HEADER PRINCIPAL --- */
+.header-pane {
+    -fx-background-color: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+    -fx-padding: 25 20;
+}
+
+.header-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.header-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #C7D2FE;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1;
+}
+
+.sidebar .label {
+    -fx-text-fill: #1E293B !important;
+}
+
+/* ==================== STATISTIQUES COLORÉES ==================== */
+.stat-card {
+    -fx-background-radius: 16px;
+    -fx-padding: 16;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);
+    -fx-transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 12, 0, 0, 3);
+}
+
+/* Carte Total événements */
+.stat-card-total {
+    -fx-background-color: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
+}
+.stat-card-total .stat-number,
+.stat-card-total .stat-label,
+.stat-card-total .stat-emoji {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Carte Aujourd'hui */
+.stat-card-today {
+    -fx-background-color: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+}
+.stat-card-today .stat-number,
+.stat-card-today .stat-label,
+.stat-card-today .stat-emoji {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Carte Cette semaine */
+.stat-card-week {
+    -fx-background-color: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+}
+.stat-card-week .stat-number,
+.stat-card-week .stat-label,
+.stat-card-week .stat-emoji {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Carte Importants */
+.stat-card-important {
+    -fx-background-color: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
+}
+.stat-card-important .stat-number,
+.stat-card-important .stat-label,
+.stat-card-important .stat-emoji {
+    -fx-text-fill: #FFFFFF;
+}
+
+.stat-number {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.stat-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 0.5px;
+}
+
+.stat-emoji {
+    -fx-font-size: 28px;
+}
+
+/* --- BOUTONS RADIO (Filtres) --- */
+.radio-button {
+    -fx-text-fill: #334155 !important;
+    -fx-font-size: 13px;
+    -fx-padding: 8 10 8 25;
+}
+
+.radio-button:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+.radio-button:selected {
+    -fx-text-fill: #6366F1 !important;
+}
+
+/* ==================== CATÉGORIES AVEC ICÔNES ==================== */
+/* Style de base pour les liens de catégories */
+.hyperlink {
+    -fx-underline: false;
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+/* Catégorie Travail */
+.hyperlink-category-work {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-work:hover {
+    -fx-background-color: #EEF2FF;
+    -fx-text-fill: #6366F1 !important;
+}
+.hyperlink-category-work:before {
+    -fx-content: "💼 ";
+}
+
+/* Catégorie Personnel */
+.hyperlink-category-personal {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-personal:hover {
+    -fx-background-color: #ECFDF5;
+    -fx-text-fill: #10B981 !important;
+}
+
+/* Catégorie Étude */
+.hyperlink-category-study {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-study:hover {
+    -fx-background-color: #EFF6FF;
+    -fx-text-fill: #3B82F6 !important;
+}
+
+/* Catégorie Santé */
+.hyperlink-category-health {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-health:hover {
+    -fx-background-color: #FEF3C7;
+    -fx-text-fill: #D97706 !important;
+}
+
+/* Catégorie Famille */
+.hyperlink-category-family {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-family:hover {
+    -fx-background-color: #FDF2F8;
+    -fx-text-fill: #EC4899 !important;
+}
+
+/* Catégorie Loisirs */
+.hyperlink-category-leisure {
+    -fx-text-fill: #1E293B !important;
+}
+.hyperlink-category-leisure:hover {
+    -fx-background-color: #F3E8FF;
+    -fx-text-fill: #9333EA !important;
+}
+
+/* --- ZONE DE RECHERCHE & FORMULAIRES --- */
+.text-field, .text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 10 14;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1E293B !important;
+    -fx-prompt-text-fill: #94A3B8;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #6366F1;
+    -fx-border-width: 2;
+}
+
+.combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 5 10;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #1E293B !important;
+    -fx-background-color: #FFFFFF;
+}
+
+.combo-box .list-cell:filled:selected {
+    -fx-background-color: #EEF2FF;
+    -fx-text-fill: #6366F1 !important;
+}
+
+.date-picker {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.date-picker .text-field {
+    -fx-text-fill: #1E293B !important;
+}
+
+/* --- BOUTONS --- */
+.button {
+    -fx-background-radius: 12px;
+    -fx-border-width: 0;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 10 24;
+}
+
+.btn-primary {
+    -fx-background-color: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+    -fx-text-fill: #FFFFFF !important;
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(135deg, #818CF8 0%, #6366F1 100%);
+}
+
+.btn-secondary {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: #1E293B !important;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #E2E8F0;
+}
+
+.btn-danger {
+    -fx-background-color: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    -fx-text-fill: #FFFFFF !important;
+}
+
+.btn-success {
+    -fx-background-color: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    -fx-text-fill: #FFFFFF !important;
+}
+
+/* --- LABELS GÉNÉRIQUES --- */
+.label {
+    -fx-text-fill: #1E293B !important;
+}
+
+/* --- LISTVIEW DES ÉVÉNEMENTS --- */
+.event-list {
+    -fx-background-color: transparent;
+}
+
+.event-list .list-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 14 18;
+    -fx-background-radius: 14px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1;
+    -fx-border-radius: 14px;
+    -fx-margin: 0 0 8 0;
+}
+
+.event-list .list-cell:filled:hover {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #C7D2FE;
+}
+
+.event-list .list-cell:filled:selected {
+    -fx-background-color: #EEF2FF;
+    -fx-border-color: #6366F1;
+    -fx-border-width: 2;
+}
+
+/* --- ACCORDION (Ajout rapide) --- */
+.titled-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 16px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 16px;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 16px;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+}
+
+.titled-pane > .title .text {
+    -fx-fill: #1E293B !important;
+}
+
+.titled-pane > .title:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0 0 16px 16px;
+    -fx-padding: 20;
+}
+
+.titled-pane .label {
+    -fx-text-fill: #1E293B !important;
+    -fx-font-weight: 600;
+}
+
+/* --- SLIDER IMPORTANCE --- */
+.slider .track {
+    -fx-background-color: linear-gradient(to right, #FDE68A, #FCD34D, #F59E0B, #F97316, #EF4444);
+    -fx-background-radius: 6px;
+    -fx-pref-height: 6px;
+}
+
+.slider .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #6366F1;
+    -fx-border-width: 3px;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+}
+
+/* --- TOAST NOTIFICATION --- */
+.toast {
+    -fx-background-color: #1E293B;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 40px;
+    -fx-padding: 12 24;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* --- STATUS BAR --- */
+.status-bar-label {
+    -fx-text-fill: #FFFFFF !important;
+}
+
+/* --- DIALOGUES --- */
+.dialog-pane {
+    -fx-background-color: #FFFFFF;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #1E293B !important;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #475569 !important;
+}
+
+.dialog-pane .button {
+    -fx-text-fill: #FFFFFF !important;
+}
+
+/* --- SCROLLBAR --- */
+.scroll-bar .thumb {
+    -fx-background-color: #CBD5E1;
+    -fx-background-radius: 10px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #94A3B8;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #F1F5F9;
+    -fx-background-radius: 10px;
+}
