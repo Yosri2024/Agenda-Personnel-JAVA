@@ -22,8 +22,10 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# IDE
-.idea/
+# IDE - keep run configs
+.idea/*
+!.idea/runConfigurations/
+!.idea/misc.xml
 *.iws
 *.iml
 *.ipr

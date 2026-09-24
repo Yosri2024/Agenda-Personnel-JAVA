@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PersonalAgenda" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="personalagenda.PersonalAgenda" />
+    <module name="Agenda-Personnel-JAVA" />
+    <option name="VM_PARAMETERS" value="--module-path /home/yosriii/javafx-sdk-27/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base -Dfile.encoding=UTF-8" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
