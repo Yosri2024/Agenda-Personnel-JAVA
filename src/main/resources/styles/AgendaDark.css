@@ -1,0 +1,54 @@
+/* ==========================================================================
+   AgendaDark.css : surcharge des tokens de AgendaStyle.css (mode sombre).
+   Chargé APRÈS AgendaStyle.css, donc ses valeurs gagnent.
+   ========================================================================== */
+
+.root {
+    -ag-bg: #0B1020;
+    -ag-surface: #151B2E;
+    -ag-surface-2: #1B2338;
+    -ag-border: #2A3350;
+    -ag-text: #E6EAF5;
+    -ag-text-2: #A5B0CC;
+    -ag-muted: #6B7794;
+    -ag-primary: #818CF8;
+    -ag-primary-hover: #A5B4FC;
+    -ag-primary-soft: #23274F;
+    -ag-danger: #F87171;
+    -ag-danger-soft: #3B1D26;
+    -ag-star: #FBBF24;
+
+    -fx-base: #151B2E;
+}
+
+/* Le texte sur un bouton plein clair doit rester lisible */
+.btn-primary,
+.dialog-pane .button:default {
+    -fx-text-fill: #0B1020;
+}
+
+.event-list .list-cell:filled:hover .event-card {
+    -fx-border-color: #3B4580;
+}
+
+.panel,
+.event-card {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 12, 0, 0, 3);
+}
+
+/* Survols catégories : les pastels clairs du thème light flashent en sombre,
+   on les remplace par des teintes adaptées au fond sombre. */
+.hyperlink-category-work:hover { -fx-background-color: #23274F; -fx-text-fill: #A5B4FC; }
+.hyperlink-category-personal:hover { -fx-background-color: #123B3A; -fx-text-fill: #5EEAD4; }
+.hyperlink-category-study:hover { -fx-background-color: #16294D; -fx-text-fill: #7DD3FC; }
+.hyperlink-category-health:hover { -fx-background-color: #12352A; -fx-text-fill: #6EE7B7; }
+.hyperlink-category-family:hover { -fx-background-color: #3B1D33; -fx-text-fill: #F9A8D4; }
+.hyperlink-category-leisure:hover { -fx-background-color: #3A2B12; -fx-text-fill: #FCD34D; }
+.hyperlink-category-courses:hover { -fx-background-color: #3A2415; -fx-text-fill: #FDBA74; }
+.hyperlink-category-other:hover { -fx-background-color: #2A2350; -fx-text-fill: #C4B5FD; }
+
+/* Boutons plein vert/rouge : garder un texte blanc lisible en sombre */
+.btn-success,
+.btn-danger {
+    -fx-text-fill: #FFFFFF;
+}
